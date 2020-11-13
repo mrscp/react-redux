@@ -10,8 +10,8 @@ ENV PATH /soceton-world-frontend/node_modules/.bin:$PATH
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm cache verify
-RUN npm cache clean --force
+# RUN npm cache verify
+# RUN npm cache clean --force
 RUN npm ci --production
 RUN npm install
 RUN npm install --no-package-lock
